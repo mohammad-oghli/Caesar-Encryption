@@ -10,8 +10,7 @@ print(encrypted_msg)
 `Nkrru Cuxrj!`
 
 <pre>
-<code>
 decrypted_msg = caesarCipher_decode(encrypted_msg, 6)
-print(decrypted_msg) </code>
+print(decrypted_msg) 
 </pre>
 `Hello World!`
