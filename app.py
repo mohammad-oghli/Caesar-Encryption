@@ -13,6 +13,7 @@ def caesarCipher_encode(msg, k):
     alphabet = string.ascii_lowercase
     map_char = {}
     encrypted_msg = ""
+    k = int(k)
     for i in range(len(alphabet)):
         map_char[alphabet[i]] = i
     if k > 25:
@@ -48,6 +49,7 @@ def caesarCipher_decode(en_msg, k):
     alphabet = string.ascii_lowercase
     map_char = {}
     decrypted_msg = ""
+    k = int(k)
     for i in range(len(alphabet)):
         map_char[alphabet[i]] = i
     if k > 25:
