@@ -5,13 +5,13 @@ Python function as a web service to Encrypt & Decrypt text message using **Caesa
 <pre>
 message = "Hello World!"
 </pre>
-We will encrypt this message using key k = 6 which is fixed right shift rotations of the characters 
+We will encrypt this message using key `k=6` which is fixed right shift rotations of the alphabet characters 
 <pre>
 caesarCipher_encode(message, 6)
 </pre>
 The encrypted message : `Nkrru Cuxrj!`
 
-To decrypt the message we use the exact key k=6 in reverse which is left shift rotations of the characters.
+To decrypt the message we use the exact key `k=6` in reverse which is left shift rotations of the characters.
 <pre>
 caesarCipher_decode(encrypted_msg, 6)
 </pre>
