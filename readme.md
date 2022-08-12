@@ -16,7 +16,7 @@ To decrypt the message we use the exact key `k=6` in reverse which is left shift
 caesarCipher_decode(encrypted_msg, 6)
 </pre>
 `Hello World!`
-### How to call it:
+### How to call it
 
 * Load the Daisi
 <pre>
