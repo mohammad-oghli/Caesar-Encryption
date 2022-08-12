@@ -35,7 +35,7 @@ encrypted_msg
 
   `Nkrru Cuxrj!`
 
-To decrypt the message we can call the function `caesarCipher_decode(en_msg, k).value` from the end point:
+To decrypt the message we can call the function `caesarCipher_decode(en_msg, k)` from the end point:
 <pre>
 decrypted_msg = caesar_message_encryption.caesarCipher_decode(en_msg, k).value
 decrypted_msg 
