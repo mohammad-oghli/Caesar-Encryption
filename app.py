@@ -15,6 +15,8 @@ def caesarCipher_encode(msg, k):
     map_char = {}
     encrypted_msg = ""
     k = int(k)
+    if not k > 0:
+        return "Key should be greater than 0"
     for i in range(len(alphabet)):
         map_char[alphabet[i]] = i
     if k > 25:
@@ -52,6 +54,8 @@ def caesarCipher_decode(en_msg, k):
     map_char = {}
     decrypted_msg = ""
     k = int(k)
+    if not k > 0:
+        return "Key should be greater than 0"
     for i in range(len(alphabet)):
         map_char[alphabet[i]] = i
     if k > 25:
@@ -97,6 +101,7 @@ def get_cypher_table(k):
             p_cypher[character] = alphabet[off_k]
         else:
             p_cypher[character] = alphabet[map_char[character] + k]
+
     return p_cypher
 
 
