@@ -93,6 +93,8 @@ def get_cypher_table(k):
         "Plain": "Cypher"
     }
     k = int(k)
+    if not k > 0:
+        return "Key should be greater than 0"
     for i in range(len(alphabet)):
         map_char[alphabet[i]] = i
     for character in alphabet:
