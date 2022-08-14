@@ -42,6 +42,45 @@ decrypted_msg
 </pre>
 `Hello World!`
 
+To display transformation table of Caesar cypher for the key `k=6 ` we can call function `get_cypher_table(k)` from the end point:
+<pre>
+cypher_table = caesar_message_encryption.get_cypher_table(6).value
+cypher_table
+</pre>
+It will print:
+<pre>
+{
+    'Plain': 'Cypher',
+    'A': 'G',
+    'B': 'H',
+    'C': 'I',
+    'D': 'J',
+    'E': 'K',
+    'F': 'L',
+    'G': 'M',
+    'H': 'N',
+    'I': 'O',
+    'J': 'P',
+    'K': 'Q',
+    'L': 'R',
+    'M': 'S',
+    'N': 'T',
+    'O': 'U',
+    'P': 'V',
+    'Q': 'W',
+    'R': 'X',
+    'S': 'Y',
+    'T': 'Z',
+    'U': 'A',
+    'V': 'B',
+    'W': 'C',
+    'X': 'D',
+    'Y': 'E',
+    'Z': 'F'
+}
+</pre>
+
+
 For more info about Caesar cipher check this reference:
 
 https://en.wikipedia.org/wiki/Caesar_cipher
