@@ -97,6 +97,9 @@ def get_cypher_table(k):
         return "Key should be greater than 0"
     for i in range(len(alphabet)):
         map_char[alphabet[i]] = i
+    if k > 25:
+        if k % 26 >= 0:
+            k = k % 26 
     for character in alphabet:
         if map_char[character] + k > 25:
             off_k = k - (25 - map_char[character]) - 1
