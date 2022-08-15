@@ -1,4 +1,6 @@
 import string
+import streamlit as st
+import pandas as pd
 
 
 def caesarCipher_encode(msg, k):
@@ -14,7 +16,6 @@ def caesarCipher_encode(msg, k):
     alphabet = string.ascii_lowercase
     map_char = {}
     encrypted_msg = ""
-    k = int(k)
     if not k > 0:
         return "Key should be greater than 0"
     if k > 25:
@@ -53,7 +54,6 @@ def caesarCipher_decode(en_msg, k):
     alphabet = string.ascii_lowercase
     map_char = {}
     decrypted_msg = ""
-    k = int(k)
     if not k > 0:
         return "Key should be greater than 0"
     if k > 25:
@@ -92,7 +92,6 @@ def get_cypher_table(k):
     p_cypher = {
         "Plain": "Cypher"
     }
-    k = int(k)
     if not k > 0:
         return "Key should be greater than 0"
     if k > 25:
@@ -110,11 +109,34 @@ def get_cypher_table(k):
     return p_cypher
 
 
+def st_ui():
+    '''
+    Render the User Interface of the application endpoints
+    '''
+    st.title("Caesar Message Encryption")
+    message = st.text_input(label='Message', placeholder="Type your message")
+    k1 = st.number_input('Key', min_value=1, step=1)
+    encrypted_msg = caesarCipher_encode(message, k1)
+    st.subheader("Encrypted Message")
+    st.write(f"**{encrypted_msg}**")
+    encrypted_msg = st.text_input(label='Encrypted Message', placeholder="Type your encrypted message")
+    k2 = st.number_input('Encryption Key', min_value=1, step=1)
+    decrypted_msg = caesarCipher_decode(encrypted_msg, k2)
+    st.subheader("Decrypted Message")
+    st.write(f"**{decrypted_msg}**")
+    st.subheader("Cypher Table")
+    cypher_table = get_cypher_table(k1)
+    df = pd.DataFrame([cypher_table])
+    st.write(df)
+
+
 if __name__ == "__main__":
-    message = "Hello World!"
-    cypher_table = get_cypher_table(6)
-    print(cypher_table)
-    encrypted_msg = caesarCipher_encode(message, 6)
-    print(encrypted_msg)
-    decrypted_msg = caesarCipher_decode(encrypted_msg, 6)
-    print(decrypted_msg)
+    # render the app using streamlit ui function
+    st_ui()
+    # message = "Hello World!"
+    # cypher_table = get_cypher_table(6)
+    # print(cypher_table)
+    # encrypted_msg = caesarCipher_encode(message, 6)
+    # print(encrypted_msg)
+    # decrypted_msg = caesarCipher_decode(encrypted_msg, 6)
+    # print(decrypted_msg)
