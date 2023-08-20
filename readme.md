@@ -1,7 +1,7 @@
 # Caesar Message Encryption (Daisi Hackathon)
 Python function as a web service to Encrypt & Decrypt text message using **Caesar cipher** algorithm.
 
-### Example
+## Example
 <pre>
 message = "Hello World!"
 </pre>
@@ -16,7 +16,7 @@ To decrypt the message we use the exact key `k=6` in reverse which is left shift
 caesarCipher_decode(encrypted_msg, 6)
 </pre>
 `Hello World!`
-### How to call it
+## How to call it
 
 * Load the Daisi
 <pre>
@@ -79,7 +79,6 @@ It will print:
     'Z': 'F'
 }
 </pre>
-
 
 For more info about Caesar cipher check this reference:
 
